@@ -34,7 +34,7 @@ $(document).ready(function(){
 
 
 
-    
+
     // Add an event on the submit button created
     
     $("#addImage").on("click", function(event) {
@@ -98,7 +98,7 @@ $(document).ready(function(){
                     $(this).addClass("animatedImage");
                 });  
                 
-                //freezes image on click
+                //freezes image on click https://stackoverflow.com/questions/5818003/stop-a-gif-animation-onload-on-mouseover-start-the-activation
                 $(document).on("click",".animatedImage", function(){
                     let dataNumber = $(this).attr("data-name");
                     $(this).attr("src",response.data[dataNumber].images[x].url); 
